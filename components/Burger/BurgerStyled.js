@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const StyledBurger = styled.div`
   display: none;
-  width: 25px;
+  width: 30px;
+  min-height: 28px;
   flex-direction: column;
   align-items: center;
   overflow: hidden;

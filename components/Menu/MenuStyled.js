@@ -36,16 +36,16 @@ export const StyledMenu = styled.nav`
   li {
     margin-right: 35px;
 
+    :last-child {
+      margin-right: 0;
+    }
+
     @media screen and (max-width: ${({ theme }) => theme.tablet}) {
       margin: 0;
       opacity: ${({ open }) => (open ? "1" : "0")};
       transform: ${({ open }) => (open ? "translateY(0)" : "translateY(3rem)")};
       transition: all 0.6s ease-in-out;
       transition-delay: 1200ms;
-
-      :last-child {
-        margin-right: 0;
-      }
 
       :nth-child(1) {
         transition-delay: 200ms;

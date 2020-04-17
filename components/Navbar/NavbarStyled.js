@@ -19,3 +19,12 @@ export const StyledNavbar = styled.div`
     align-items: center;
   }
 `;
+
+export const BurgerWrapper = styled.div`
+  display: none;
+
+  @media screen and (max-width: ${({ theme }) => theme.tablet}) {
+    display: flex;
+    align-items: center;
+  }
+`;

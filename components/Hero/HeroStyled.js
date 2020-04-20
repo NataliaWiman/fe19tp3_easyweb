@@ -14,7 +14,7 @@ export const HeroBgWrapper = styled.div`
 export const HeroBg = styled.div`
   height: 750px;
   position: relative;
-  background-image: url("https://demo-coffee.easyweb.site/upl/images/659073/rf4ohrfelnr21.jpg");
+  background-image: url("https://demo-fe19-tp3.easyweb.site/upl/images/659073/rf4ohrfelnr21.jpg");
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;

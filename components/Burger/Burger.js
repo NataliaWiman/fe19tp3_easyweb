@@ -1,15 +1,19 @@
-import { bool, func } from "prop-types";
-import { StyledBurger } from "./BurgerStyled";
+import React from 'react';
+import { bool, func } from 'prop-types';
+import { StyledBurger } from './BurgerStyled';
 
-const Burger = ({ open, setOpen }) => {
+const Burger = ({ open, setOpen, ...props }) => {
+  
+  const isExpanded = open ? true : false;
+  
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+    <StyledBurger aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={() => setOpen(!open)} {...props}>
       <span />
       <span />
       <span />
     </StyledBurger>
-  );
-};
+  )
+}
 
 Burger.propTypes = {
   open: bool.isRequired,

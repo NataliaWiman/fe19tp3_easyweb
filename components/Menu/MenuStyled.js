@@ -5,17 +5,19 @@ export const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   color: ${({ theme }) => theme.primaryLight};
-
   @media screen and (max-width: ${({ theme }) => theme.tablet}) {
     width: 100%;
-    position: fixed;
-    right: 0;
+    padding: 2rem;
+    position: absolute;
     top: 0;
+    left: 0;
     height: 100vh;
+    text-align: left;
     background-color: ${({ theme }) => theme.primaryAccent};
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-    transition: transform 0.8s;
+    transition: transform 0.4s ease-in-out;
     background: rgba(0, 0, 0, 0.85);
+    
   }
 
   ul {

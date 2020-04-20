@@ -1,28 +1,36 @@
 import styled from "styled-components";
 
-export const StyledBurger = styled.div`
-  display: none;
-  width: 30px;
-  min-height: 28px;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  align-self: flex-start;
-  cursor: pointer;
-  z-index: 100;
 
-  @media screen and (max-width: ${({ theme }) => theme.tablet}) {
-    display: flex;
+export const StyledBurger = styled.div`
+  position: absolute;
+  top: 5%;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+   &:focus {
+    outline: none;
   }
+
 
   span {
     display: block;
-    width: 100%;
-    height: 3px;
+    width: 2rem;
+    height: 0.25rem;
     margin: 2px 0;
+    transform-origin: 21px;
     background: ${({ open, theme }) =>
       open ? theme.secondaryLight : theme.primaryLight};
     border-radius: 3px;
+  
     animation-duration: 0.8s;
     animation-fill-mode: both;
     transition: background 0.8s;
@@ -42,6 +50,12 @@ export const StyledBurger = styled.div`
   span:nth-child(3) {
     animation-name: ${({ open }) => (open ? "e" : "f")};
   }
+
+  @media screen and (max-width: ${({ theme }) => theme.tablet}) {
+    display: flex;
+    
+  }
+
 
   @keyframes a {
     0% {

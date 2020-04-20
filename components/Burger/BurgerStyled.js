@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const StyledBurger = styled.div`
   display: none;
   width: 30px;
-  min-height: 28px;
+  height: 30px;
+  margin: 0 auto;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
@@ -15,6 +16,11 @@ export const StyledBurger = styled.div`
     display: flex;
   }
 
+  :hover span {
+    background-color: ${({ theme }) => theme.secondaryAccent};
+    transition: background-color 0.3s;
+  }
+
   span {
     display: block;
     width: 100%;
@@ -23,9 +29,9 @@ export const StyledBurger = styled.div`
     background: ${({ open, theme }) =>
       open ? theme.secondaryLight : theme.primaryLight};
     border-radius: 3px;
+    transition: background 0.8s;
     animation-duration: 0.8s;
     animation-fill-mode: both;
-    transition: background 0.8s;
     animation-delay: ${({ open }) => (open ? "0" : "0.4s")};
   }
 

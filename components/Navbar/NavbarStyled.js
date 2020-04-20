@@ -25,6 +25,8 @@ export const BurgerWrapper = styled.div`
 
   @media screen and (max-width: ${({ theme }) => theme.tablet}) {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 `;

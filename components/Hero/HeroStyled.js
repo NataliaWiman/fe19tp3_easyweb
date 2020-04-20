@@ -56,7 +56,7 @@ export const HeroContent = styled.div`
     }
 
     to {
-      transform: translateX(-50%) translateY(10%);
+      transform: translateX(-50%) translateY(0);
     }
   }
 `;

@@ -5,7 +5,8 @@ import { theme } from "../styles/theme";
 import Layout from "../components/Layout/Layout";
 import Head from "next/head";
 
-function Index({ data, menu, site }) {
+function Index({ data, menu, site, settings }) {
+  /* console.log(settings.pageFont.value); */
   return (
     <ThemeProvider theme={theme}>
       <Head>
@@ -27,8 +28,9 @@ export async function getServerSideProps(ctx) {
   var data = await getEasywebData("/routes");
   var menu = await getEasywebData("/load/menu");
   var site = await getEasywebData("/load/site");
+  var settings = await getEasywebData("/load/settings");
 
-  return { props: { data, menu, site } };
+  return { props: { data, menu, site, settings } };
 }
 
 export default Index;

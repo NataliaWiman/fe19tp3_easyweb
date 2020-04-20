@@ -5,6 +5,7 @@ export const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   color: ${({ theme }) => theme.primaryLight};
+  overflow: auto;
 
   @media screen and (max-width: ${({ theme }) => theme.tablet}) {
     width: 100%;
@@ -14,7 +15,9 @@ export const StyledMenu = styled.nav`
     height: 100vh;
     background-color: ${({ theme }) => theme.primaryAccent};
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-    transition: transform 0.8s;
+    transition: 400ms linear;
+    /* transition: ${({ open }) =>
+      open ? "transform 0.8s" : "transform 0s"}; */
     background: rgba(0, 0, 0, 0.85);
   }
 
@@ -26,6 +29,7 @@ export const StyledMenu = styled.nav`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
+    overflow: auto;
 
     @media screen and (max-width: ${({ theme }) => theme.tablet}) {
       flex-direction: column;
@@ -45,37 +49,36 @@ export const StyledMenu = styled.nav`
       opacity: ${({ open }) => (open ? "1" : "0")};
       transform: ${({ open }) => (open ? "translateY(0)" : "translateY(3rem)")};
       transition: all 0.6s ease-in-out;
-      transition-delay: 1200ms;
 
       :nth-child(1) {
-        transition-delay: 200ms;
+        transition-delay: ${({ open }) => (open ? "200ms" : "0")};
       }
       :nth-child(2) {
-        transition-delay: 300ms;
+        transition-delay: ${({ open }) => (open ? "300ms" : "0")};
       }
       :nth-child(3) {
-        transition-delay: 400ms;
+        transition-delay: ${({ open }) => (open ? "400ms" : "0")};
       }
       :nth-child(4) {
-        transition-delay: 500ms;
+        transition-delay: ${({ open }) => (open ? "500ms" : "0")};
       }
       :nth-child(5) {
-        transition-delay: 600ms;
+        transition-delay: ${({ open }) => (open ? "600ms" : "0")};
       }
       :nth-child(6) {
-        transition-delay: 700ms;
+        transition-delay: ${({ open }) => (open ? "700ms" : "0")};
       }
       :nth-child(7) {
-        transition-delay: 800ms;
+        transition-delay: ${({ open }) => (open ? "800ms" : "0")};
       }
       :nth-child(8) {
-        transition-delay: 900ms;
+        transition-delay: ${({ open }) => (open ? "900ms" : "0")};
       }
       :nth-child(9) {
-        transition-delay: 1000ms;
+        transition-delay: ${({ open }) => (open ? "1000ms" : "0")};
       }
       :nth-child(10) {
-        transition-delay: 1100ms;
+        transition-delay: ${({ open }) => (open ? "1100ms" : "0")};
       }
     }
   }
@@ -92,8 +95,9 @@ export const StyledMenu = styled.nav`
     }
 
     @media screen and (max-width: ${({ theme }) => theme.tablet}) {
-      margin: 0;
-      padding: 25px 100px 25px 60px;
+      font-size: 1.5rem;
+      margin: 10px 0;
+      padding: 15px 0 15px 5%;
       color: ${({ theme }) => theme.primaryLight};
     }
   }

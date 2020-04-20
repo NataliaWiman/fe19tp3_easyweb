@@ -1,17 +1,12 @@
-import React from 'react'
-import styled from "styled-components";
+  
+import { StyledLogo } from "./LogoStyled";
 
-
-const Logo = () => {
+const Logo = ({ site }) => {
   return (
-    <Image src="https://app.easyweb.se/images/logo_white.svg" alt="Company Logo" />
-  )
-}
+    <StyledLogo>
+      <a href="/">{site.label}</a>
+    </StyledLogo>
+  );
+};
 
-export default Logo
-
-const Image = styled.img`
-  height: 85%;
-  margin: auto 0;
-`;
-         
+export default Logo;

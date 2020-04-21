@@ -18,7 +18,7 @@ export const StyledBurger = styled.div`
 
   :hover span {
     background-color: ${({ theme }) => theme.secondaryAccent};
-    transition: background-color 0.3s;
+    transition: background-color 300ms;
   }
 
   span {
@@ -29,10 +29,10 @@ export const StyledBurger = styled.div`
     background: ${({ open, theme }) =>
       open ? theme.secondaryLight : theme.primaryLight};
     border-radius: 3px;
-    transition: background 0.8s;
-    animation-duration: 0.8s;
+    transition: background 800ms;
+    animation-duration: 800ms;
     animation-fill-mode: both;
-    animation-delay: ${({ open }) => (open ? "0" : "0.4s")};
+    animation-delay: ${({ open }) => (open ? "0" : "400ms")};
   }
 
   span:first-child {
@@ -41,8 +41,8 @@ export const StyledBurger = styled.div`
 
   span:nth-child(2) {
     animation-name: ${({ open }) => (open ? "c" : "d")};
-    animation-delay: 0.4s;
-    animation-duration: 0.3s;
+    animation-delay: ${({ open }) => (open ? "400ms" : "500ms")};
+    animation-duration: 300ms;
   }
 
   span:nth-child(3) {
@@ -51,13 +51,14 @@ export const StyledBurger = styled.div`
 
   @keyframes a {
     0% {
-      transform: translateY(0);
+      transform: ${({ open }) => (open ? "translateY(0)" : "none")};
     }
     50% {
-      transform: translateY(8px);
+      transform: ${({ open }) => (open ? "translateY(8px)" : "none")};
     }
     to {
-      transform: translateY(8px) rotate(-45deg);
+      transform: ${({ open }) =>
+        open ? "translateY(8px) rotate(-45deg)" : "none"};
     }
   }
 
@@ -76,13 +77,14 @@ export const StyledBurger = styled.div`
 
   @keyframes e {
     0% {
-      transform: translateY(0);
+      transform: ${({ open }) => (open ? "translateY(0)" : "none")};
     }
     50% {
-      transform: translateY(-6px);
+      transform: ${({ open }) => (open ? "translateY(-6px)" : "none")};
     }
     to {
-      transform: translateY(-6px) rotate(45deg);
+      transform: ${({ open }) =>
+        open ? "translateY(-6px) rotate(45deg)" : "none"};
     }
   }
 
@@ -101,10 +103,10 @@ export const StyledBurger = styled.div`
 
   @keyframes c {
     0% {
-      opacity: 1;
+      opacity: ${({ open }) => (open ? "1" : "0")};
     }
     to {
-      opacity: 0;
+      opacity: ${({ open }) => (open ? "0" : "0")};
     }
   }
 
@@ -113,7 +115,7 @@ export const StyledBurger = styled.div`
       opacity: ${({ open }) => (open ? "0" : "1")};
     }
     to {
-      opacity: 1;
+      opacity: ${({ open }) => (open ? "1" : "1")};
     }
   }
 `;

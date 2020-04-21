@@ -35,29 +35,31 @@ export const HeroBg = styled.div`
 export const HeroContent = styled.div`
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
   bottom: 50px;
+  transform: translateX(-50%);
   text-align: center;
   width: 60%;
   z-index: 2;
-  animation-name: test;
-  animation-delay: 0.4s;
-  animation-duration: 0.5s;
+
+  @media screen and (min-width: ${({ theme }) => theme.tablet}) {
+    animation-name: test;
+    animation-delay: 0.4s;
+    animation-duration: 0.5s;
+
+    @keyframes test {
+      0% {
+        transform: translateX(-50%) translateY(100%);
+      }
+      to {
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+  }
 
   @media screen and (max-width: ${({ theme }) => theme.tablet}) {
     width: 60%;
     bottom: 50%;
     transform: translateX(-50%) translateY(50%);
-  }
-
-  @keyframes test {
-    0% {
-      transform: translateX(-50%) translateY(100%);
-    }
-
-    to {
-      transform: translateX(-50%) translateY(0);
-    }
   }
 `;
 

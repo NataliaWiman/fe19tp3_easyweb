@@ -65,7 +65,7 @@ export const HeroContent = styled.div`
 
 export const HeroTitle = styled.h1`
   font-size: ${({ theme }) => theme.fontSize};
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
   color: ${({ theme }) => theme.secondaryAccent};
 `;

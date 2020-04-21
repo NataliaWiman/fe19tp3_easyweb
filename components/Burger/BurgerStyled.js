@@ -63,13 +63,14 @@ export const StyledBurger = styled.div`
 
   @keyframes b {
     0% {
-      transform: translateY(8px) rotate(-45deg);
+      transform: ${({ open }) =>
+        open ? "translateY(8px) rotate(-45deg)" : "none"};
     }
     50% {
-      transform: translateY(8px);
+      transform: ${({ open }) => (open ? "translateY(8px)" : "none")};
     }
     to {
-      transform: translateY(0);
+      transform: ${({ open }) => (open ? "translateY(0)" : "none")};
     }
   }
 
@@ -87,13 +88,14 @@ export const StyledBurger = styled.div`
 
   @keyframes f {
     0% {
-      transform: translateY(-6px) rotate(45deg);
+      transform: ${({ open }) =>
+        open ? "translateY(-6px) rotate(45deg)" : "none"};
     }
     50% {
-      transform: translateY(-6px);
+      transform: ${({ open }) => (open ? "translateY(-6px)" : "none")};
     }
     to {
-      transform: translateY(0);
+      transform: ${({ open }) => (open ? "translateY(0)" : "none")};
     }
   }
 
@@ -108,7 +110,7 @@ export const StyledBurger = styled.div`
 
   @keyframes d {
     0% {
-      opacity: 0;
+      opacity: ${({ open }) => (open ? "0" : "1")};
     }
     to {
       opacity: 1;

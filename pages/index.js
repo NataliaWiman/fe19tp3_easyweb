@@ -6,7 +6,6 @@ import Layout from "../components/Layout/Layout";
 import Head from "next/head";
 
 function Index({ data, menu, site, settings }) {
-  /* console.log(settings.pageFont.value); */
   return (
     <ThemeProvider theme={theme}>
       <Head>
@@ -15,7 +14,7 @@ function Index({ data, menu, site, settings }) {
           rel="stylesheet"
         />
       </Head>
-      <GlobalStyles />
+      <GlobalStyles settings={settings} />
       <Layout data={data} menu={menu} site={site} />
     </ThemeProvider>
   );

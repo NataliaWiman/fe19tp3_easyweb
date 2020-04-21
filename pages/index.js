@@ -10,7 +10,7 @@ function Index({ data, menu, site, settings }) {
     <ThemeProvider theme={theme}>
       <Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Open+Sans:wght@600&display=swap"
           rel="stylesheet"
         />
       </Head>

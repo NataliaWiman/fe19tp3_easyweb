@@ -48,37 +48,37 @@ export const StyledMenu = styled.nav`
       margin: 0;
       opacity: ${({ open }) => (open ? "1" : "0")};
       transform: ${({ open }) => (open ? "translateY(0)" : "translateY(3rem)")};
-      transition: all 0.6s ease-in-out;
+      transition: all 600ms ease-in-out;
 
       :nth-child(1) {
-        transition-delay: ${({ open }) => (open ? "200ms" : "0")};
+        transition-delay: ${({ open }) => (open ? "200ms" : "600ms")};
       }
       :nth-child(2) {
-        transition-delay: ${({ open }) => (open ? "300ms" : "0")};
+        transition-delay: ${({ open }) => (open ? "300ms" : "600ms")};
       }
       :nth-child(3) {
-        transition-delay: ${({ open }) => (open ? "400ms" : "0")};
+        transition-delay: ${({ open }) => (open ? "400ms" : "600ms")};
       }
       :nth-child(4) {
-        transition-delay: ${({ open }) => (open ? "500ms" : "0")};
+        transition-delay: ${({ open }) => (open ? "500ms" : "600ms")};
       }
       :nth-child(5) {
-        transition-delay: ${({ open }) => (open ? "600ms" : "0")};
+        transition-delay: ${({ open }) => (open ? "600ms" : "600ms")};
       }
       :nth-child(6) {
-        transition-delay: ${({ open }) => (open ? "700ms" : "0")};
+        transition-delay: ${({ open }) => (open ? "700ms" : "600ms")};
       }
       :nth-child(7) {
-        transition-delay: ${({ open }) => (open ? "800ms" : "0")};
+        transition-delay: ${({ open }) => (open ? "800ms" : "600ms")};
       }
       :nth-child(8) {
-        transition-delay: ${({ open }) => (open ? "900ms" : "0")};
+        transition-delay: ${({ open }) => (open ? "900ms" : "600ms")};
       }
       :nth-child(9) {
-        transition-delay: ${({ open }) => (open ? "1000ms" : "0")};
+        transition-delay: ${({ open }) => (open ? "1000ms" : "600ms")};
       }
       :nth-child(10) {
-        transition-delay: ${({ open }) => (open ? "1100ms" : "0")};
+        transition-delay: ${({ open }) => (open ? "1100ms" : "600ms")};
       }
     }
   }

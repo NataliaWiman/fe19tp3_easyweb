@@ -8,7 +8,7 @@ export const StyledMenu = styled.nav`
   overflow: auto;
 
   @media screen and (max-width: ${({ theme }) => theme.tablet}) {
-    width: 100%;
+    width: ${({ open }) => (open ? "100%" : "0")};
     position: fixed;
     right: 0;
     top: 0;

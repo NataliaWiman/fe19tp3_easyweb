@@ -19,8 +19,8 @@
     "styled-components": "^5.1.0"
   },
   "easywebSettings": {
-    "clientID": "OAuth2.u2823.h315",
-    "clientSecret": "9ce8928f-15f6-4a1d-936",
-    "clientURL": "https://omega.easyweb.se/extapi/2823"
+    "clientID": "OAuth2.u2850.h370",
+    "clientSecret": "78346a14-f539-4090-ae8",
+    "clientURL": "https://omega.easyweb.se/extapi/2850"
   }
 }

@@ -4,6 +4,7 @@ import { Header, StyledNavbar, BurgerWrapper } from "./NavbarStyled";
 import Menu from "../Menu/Menu";
 import Burger from "../Burger/Burger";
 import Logo from "../Logo/Logo";
+import LoadingDots from "../LoadingDots";
 
 const Navbar = ({ data, menu, site }) => {
   const [open, setOpen] = useState(false);
@@ -16,6 +17,7 @@ const Navbar = ({ data, menu, site }) => {
         <Logo site={site} />
         <Menu open={open} setOpen={setOpen} data={data} menu={menu} />
         <BurgerWrapper>
+          <LoadingDots />
           <Burger open={open} setOpen={setOpen} />
         </BurgerWrapper>
       </StyledNavbar>

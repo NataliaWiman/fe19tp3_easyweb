@@ -5,7 +5,7 @@ export const StyledBurger = styled.div`
   width: 30px;
   min-height: 28px;
   flex-direction: column;
-  align-items: center;
+  transform: rotate(180deg);
   overflow: hidden;
   align-self: flex-start;
   cursor: pointer;
@@ -15,18 +15,25 @@ export const StyledBurger = styled.div`
     display: flex;
   }
 
+  :hover span {
+    background-color: ${({ theme }) => theme.secondaryAccent};
+    transition: background-color 300ms;
+  }
+
   span {
     display: block;
     width: 100%;
     height: 3px;
     margin: 2px 0;
+    border-radius: 3px;
     background: ${({ open, theme }) =>
       open ? theme.secondaryLight : theme.primaryLight};
     border-radius: 3px;
-    animation-duration: 0.8s;
+
     animation-fill-mode: both;
-    transition: background 0.8s;
-    animation-delay: ${({ open }) => (open ? "0" : "0.4s")};
+    transition: background 800ms;
+    animation-duration: 800ms;
+    animation-delay: ${({ open }) => (open ? "0" : "400ms")};
   }
 
   span:first-child {
@@ -35,8 +42,9 @@ export const StyledBurger = styled.div`
 
   span:nth-child(2) {
     animation-name: ${({ open }) => (open ? "c" : "d")};
-    animation-delay: 0.4s;
-    animation-duration: 0.3s;
+    animation-delay: ${({ open }) => (open ? "400ms" : "500ms")};
+    animation-duration: 300ms;
+    width: 1.5rem;
   }
 
   span:nth-child(3) {
@@ -45,13 +53,14 @@ export const StyledBurger = styled.div`
 
   @keyframes a {
     0% {
-      transform: translateY(0);
+      transform: ${({ open }) => (open ? "translateY(0)" : "none")};
     }
     50% {
-      transform: translateY(8px);
+      transform: ${({ open }) => (open ? "translateY(8px)" : "none")};
     }
     to {
-      transform: translateY(8px) rotate(-45deg);
+      transform: ${({ open }) =>
+        open ? "translateY(8px) rotate(-45deg)" : "none"};
     }
   }
 
@@ -69,13 +78,14 @@ export const StyledBurger = styled.div`
 
   @keyframes e {
     0% {
-      transform: translateY(0);
+      transform: ${({ open }) => (open ? "translateY(0)" : "none")};
     }
     50% {
-      transform: translateY(-6px);
+      transform: ${({ open }) => (open ? "translateY(-6px)" : "none")};
     }
     to {
-      transform: translateY(-6px) rotate(45deg);
+      transform: ${({ open }) =>
+        open ? "translateY(-6px) rotate(45deg)" : "none"};
     }
   }
 
@@ -93,10 +103,10 @@ export const StyledBurger = styled.div`
 
   @keyframes c {
     0% {
-      opacity: 1;
+      opacity: ${({ open }) => (open ? "1" : "0")};
     }
     to {
-      opacity: 0;
+      opacity: ${({ open }) => (open ? "0" : "0")};
     }
   }
 
@@ -105,7 +115,7 @@ export const StyledBurger = styled.div`
       opacity: 0;
     }
     to {
-      opacity: 1;
+      opacity: ${({ open }) => (open ? "1" : "1")};
     }
   }
 `;

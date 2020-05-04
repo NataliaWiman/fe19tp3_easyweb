@@ -4,6 +4,8 @@ export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   color: ${({ theme }) => theme.primaryLight};
 
   @media screen and (max-width: ${({ theme }) => theme.tablet}) {
@@ -35,6 +37,7 @@ export const StyledMenu = styled.nav`
 
   li {
     margin-right: 35px;
+    font-size: 27px;
 
     :last-child {
       margin-right: 0;

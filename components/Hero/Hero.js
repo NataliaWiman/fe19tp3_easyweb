@@ -14,8 +14,8 @@ const Hero = ({ data }) => {
         <HeroBg />
       </HeroBgWrapper>
       <HeroContent>
-        <HeroTitle>{data["hero-top"].demoEntryH1.value}</HeroTitle>
-        <HeroText>{data["hero-top"].demoEntryTag.value}</HeroText>
+        {/* <HeroTitle>{data["hero-top"].demoEntryH1.value}</HeroTitle> */}
+        {/* <HeroText>{data["hero-top"].demoEntryTag.value}</HeroText> */}
       </HeroContent>
     </StyledHero>
   );

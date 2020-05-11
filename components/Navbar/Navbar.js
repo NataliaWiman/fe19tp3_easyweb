@@ -10,7 +10,6 @@ const Navbar = ({ data, menu, site }) => {
   const [open, setOpen] = useState(false);
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
-
   return (
     <Header>
       <StyledNavbar ref={node}>

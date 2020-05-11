@@ -14,6 +14,7 @@ export const StyledMenu = styled.nav`
     top: 0;
     height: 100vh;
     background-color: ${({ theme }) => theme.primaryAccent};
+    transform: translateX(100%);
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     transition: 400ms linear;
     /* transition: ${({ open }) =>

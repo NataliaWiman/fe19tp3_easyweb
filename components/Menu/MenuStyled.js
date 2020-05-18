@@ -1,25 +1,45 @@
 import styled from "styled-components";
 
+export const MenuCover = styled.div`
+  width: ${({ open }) => (open ? "100%" : "0")};
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 1);
+  transform: translateX(100%);
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  transition: 400ms linear;
+  z-index: -1;
+  overflow: auto;
+`;
+
 export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: ${({ theme }) => theme.primaryLight};
+  color: ${({ theme }) => theme.primaryDark};
   overflow: auto;
 
   @media screen and (max-width: ${({ theme }) => theme.tablet}) {
-    width: ${({ open }) => (open ? "100%" : "0")};
+/*     width: ${({ open }) => (open ? "100%" : "0")};
     position: fixed;
     right: 0;
     top: 0;
     height: 100vh;
-    background-color: ${({ theme }) => theme.primaryAccent};
     transform: translateX(100%);
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     transition: 400ms linear;
     /* transition: ${({ open }) =>
       open ? "transform 0.8s" : "transform 0s"}; */
-    background: rgba(0, 0, 0, 0.85);
+    /* background: rgba(0, 0, 0, 1); */
+
+    width: ${({ open }) => (open ? "100%" : "0")};
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: transparent;
   }
 
   ul {
@@ -40,6 +60,7 @@ export const StyledMenu = styled.nav`
 
   li {
     margin-right: 35px;
+    text-align: center;
 
     :last-child {
       margin-right: 0;
@@ -87,18 +108,19 @@ export const StyledMenu = styled.nav`
   a {
     display: block;
     text-decoration: none;
-    color: ${({ theme }) => theme.primaryLight};
-    transition: color 0.3s ease-in-out;
+    color: ${({ theme }) => theme.primaryDark};
+    transition: color 0.2s ease-in-out;
     cursor: pointer;
 
     :hover {
-      color: ${({ theme }) => theme.primaryAccent};
+      color: ${({ theme }) => theme.secondaryDark};
     }
 
     @media screen and (max-width: ${({ theme }) => theme.tablet}) {
-      font-size: 1.5rem;
+      font-size: 2rem;
+      font-weight: 700;
       margin: 10px 0;
-      padding: 15px 0 15px 5%;
+      padding: 0;
       color: ${({ theme }) => theme.primaryLight};
     }
   }

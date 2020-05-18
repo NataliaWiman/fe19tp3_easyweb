@@ -5,6 +5,7 @@ import {
   HeroContent,
   HeroTitle,
   HeroText,
+  HeroBtn,
 } from "./HeroStyled";
 
 const Hero = ({ data }) => {
@@ -16,6 +17,7 @@ const Hero = ({ data }) => {
       <HeroContent>
         <HeroTitle>{data["hero-top"].demoEntryH1.value}</HeroTitle>
         <HeroText>{data["hero-top"].demoEntryTag.value}</HeroText>
+        <HeroBtn href="/">Learn more</HeroBtn>
       </HeroContent>
     </StyledHero>
   );

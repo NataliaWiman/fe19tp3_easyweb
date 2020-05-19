@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const StyledLogo = styled.div`
+  z-index: 10;
+
   a {
     margin: 0;
     padding: 0;

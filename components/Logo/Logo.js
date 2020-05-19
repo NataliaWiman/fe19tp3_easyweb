@@ -1,4 +1,3 @@
-  
 import { StyledLogo } from "./LogoStyled";
 
 const Logo = ({ site }) => {

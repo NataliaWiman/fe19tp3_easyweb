@@ -1,40 +1,38 @@
 import styled from "styled-components";
 
-
 export const StyledBurger = styled.div`
-  position: absolute;
-  top: 5%;
-  right: 2rem;
-  display: flex;
+  display: none;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
   flex-direction: column;
-  justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
-  background: transparent;
-  border: none;
+  align-items: center;
+  overflow: hidden;
+  align-self: flex-start;
   cursor: pointer;
-  padding: 0;
-  z-index: 10;
+  z-index: 100;
 
-   &:focus {
-    outline: none;
+  @media screen and (max-width: ${({ theme }) => theme.tablet}) {
+    display: flex;
   }
 
+  :hover span {
+    background-color: ${({ theme }) => theme.secondaryAccent};
+    transition: background-color 300ms;
+  }
 
   span {
     display: block;
-    width: 2rem;
-    height: 0.25rem;
+    width: 100%;
+    height: 3px;
     margin: 2px 0;
-    transform-origin: 21px;
     background: ${({ open, theme }) =>
       open ? theme.secondaryLight : theme.primaryLight};
     border-radius: 3px;
-  
-    animation-duration: 0.8s;
+    transition: background 800ms;
+    animation-duration: 800ms;
     animation-fill-mode: both;
-    transition: background 0.8s;
-    animation-delay: ${({ open }) => (open ? "0" : "0.4s")};
+    animation-delay: ${({ open }) => (open ? "0" : "400ms")};
   }
 
   span:first-child {
@@ -43,83 +41,81 @@ export const StyledBurger = styled.div`
 
   span:nth-child(2) {
     animation-name: ${({ open }) => (open ? "c" : "d")};
-    animation-delay: 0.4s;
-    animation-duration: 0.3s;
+    animation-delay: ${({ open }) => (open ? "400ms" : "500ms")};
+    animation-duration: 300ms;
   }
 
   span:nth-child(3) {
     animation-name: ${({ open }) => (open ? "e" : "f")};
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.tablet}) {
-    display: flex;
-    
-  }
-
-
   @keyframes a {
     0% {
-      transform: translateY(0);
+      transform: ${({ open }) => (open ? "translateY(0)" : "none")};
     }
     50% {
-      transform: translateY(8px);
+      transform: ${({ open }) => (open ? "translateY(8px)" : "none")};
     }
     to {
-      transform: translateY(8px) rotate(-45deg);
+      transform: ${({ open }) =>
+        open ? "translateY(8px) rotate(-45deg)" : "none"};
     }
   }
 
   @keyframes b {
     0% {
-      transform: translateY(8px) rotate(-45deg);
+      transform: ${({ open }) =>
+        open ? "translateY(8px) rotate(-45deg)" : "none"};
     }
     50% {
-      transform: translateY(8px);
+      transform: ${({ open }) => (open ? "translateY(8px)" : "none")};
     }
     to {
-      transform: translateY(0);
+      transform: ${({ open }) => (open ? "translateY(0)" : "none")};
     }
   }
 
   @keyframes e {
     0% {
-      transform: translateY(0);
+      transform: ${({ open }) => (open ? "translateY(0)" : "none")};
     }
     50% {
-      transform: translateY(-6px);
+      transform: ${({ open }) => (open ? "translateY(-6px)" : "none")};
     }
     to {
-      transform: translateY(-6px) rotate(45deg);
+      transform: ${({ open }) =>
+        open ? "translateY(-6px) rotate(45deg)" : "none"};
     }
   }
 
   @keyframes f {
     0% {
-      transform: translateY(-6px) rotate(45deg);
+      transform: ${({ open }) =>
+        open ? "translateY(-6px) rotate(45deg)" : "none"};
     }
     50% {
-      transform: translateY(-6px);
+      transform: ${({ open }) => (open ? "translateY(-6px)" : "none")};
     }
     to {
-      transform: translateY(0);
+      transform: ${({ open }) => (open ? "translateY(0)" : "none")};
     }
   }
 
   @keyframes c {
     0% {
-      opacity: 1;
+      opacity: ${({ open }) => (open ? "1" : "0")};
     }
     to {
-      opacity: 0;
+      opacity: ${({ open }) => (open ? "0" : "0")};
     }
   }
 
   @keyframes d {
     0% {
-      opacity: 0;
+      opacity: ${({ open }) => (open ? "0" : "1")};
     }
     to {
-      opacity: 1;
+      opacity: ${({ open }) => (open ? "1" : "1")};
     }
   }
 `;

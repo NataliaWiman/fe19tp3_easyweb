@@ -1,25 +1,12 @@
-import { keyframes } from "styled-components";
-import slideInDown from "react-animations/lib/slide-in-down";
-import bounceIn from "react-animations/lib/bounce-in";
-import rotateIn from "react-animations/lib/rotate-in";
-
-export default {
-  fontFamily: "Signika",
-  utils: {
-    // the duration is passed as parameter
-    slideInDown: (duration) =>
-      `animation: ${duration}s ${keyframes(slideInDown)};`,
-  },
-};
-
 export const theme = {
-  primaryDark: "#333",
+  primaryDark: "#303030",
+  secondaryDark: "#989898",
   primaryLight: "#fff",
   secondaryLight: "#f2f2f2",
-  primaryAccent: "#b88a2b",
-  secondaryAccent: "#ecd5ad",
+  primaryAccent: "#f3c840",
+  secondaryAccent: "#efb600",
 
-  fontSize: "18px",
+  fontSize: "16px",
   lineHeight: "1.5",
 
   mobile: "500px",

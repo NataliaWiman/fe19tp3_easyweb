@@ -3,9 +3,10 @@ import styled from "styled-components";
 export const StyledBurger = styled.div`
   display: none;
   width: 30px;
-  min-height: 28px;
+  height: 30px;
+  margin: 0 auto;
   flex-direction: column;
-  transform: rotate(180deg);
+  align-items: center;
   overflow: hidden;
   align-self: flex-start;
   cursor: pointer;
@@ -15,24 +16,22 @@ export const StyledBurger = styled.div`
     display: flex;
   }
 
-  :hover span {
-    background-color: ${({ theme }) => theme.secondaryAccent};
+/*   :hover span {
+    background-color: ${({ theme }) => theme.primaryAccent};
     transition: background-color 300ms;
-  }
+  } */
 
   span {
     display: block;
     width: 100%;
     height: 3px;
     margin: 2px 0;
-    border-radius: 3px;
     background: ${({ open, theme }) =>
-      open ? theme.secondaryLight : theme.primaryLight};
+      open ? theme.primaryAccent : theme.primaryDark};
     border-radius: 3px;
-
-    animation-fill-mode: both;
     transition: background 800ms;
     animation-duration: 800ms;
+    animation-fill-mode: both;
     animation-delay: ${({ open }) => (open ? "0" : "400ms")};
   }
 
@@ -44,7 +43,6 @@ export const StyledBurger = styled.div`
     animation-name: ${({ open }) => (open ? "c" : "d")};
     animation-delay: ${({ open }) => (open ? "400ms" : "500ms")};
     animation-duration: 300ms;
-    width: 1.5rem;
   }
 
   span:nth-child(3) {
@@ -66,13 +64,14 @@ export const StyledBurger = styled.div`
 
   @keyframes b {
     0% {
-      transform: translateY(8px) rotate(-45deg);
+      transform: ${({ open }) =>
+        open ? "translateY(8px) rotate(-45deg)" : "none"};
     }
     50% {
-      transform: translateY(8px);
+      transform: ${({ open }) => (open ? "translateY(8px)" : "none")};
     }
     to {
-      transform: translateY(0);
+      transform: ${({ open }) => (open ? "translateY(0)" : "none")};
     }
   }
 
@@ -91,13 +90,14 @@ export const StyledBurger = styled.div`
 
   @keyframes f {
     0% {
-      transform: translateY(-6px) rotate(45deg);
+      transform: ${({ open }) =>
+        open ? "translateY(-6px) rotate(45deg)" : "none"};
     }
     50% {
-      transform: translateY(-6px);
+      transform: ${({ open }) => (open ? "translateY(-6px)" : "none")};
     }
     to {
-      transform: translateY(0);
+      transform: ${({ open }) => (open ? "translateY(0)" : "none")};
     }
   }
 
@@ -112,7 +112,7 @@ export const StyledBurger = styled.div`
 
   @keyframes d {
     0% {
-      opacity: 0;
+      opacity: ${({ open }) => (open ? "0" : "1")};
     }
     to {
       opacity: ${({ open }) => (open ? "1" : "1")};

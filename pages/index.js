@@ -5,7 +5,7 @@ import { theme } from "../styles/theme";
 import Layout from "../components/Layout/Layout";
 import Head from "next/head";
 
-function Index({ data, menu, site, settings, layout }) {
+function Index({ data, menu, site, settings, layout, contact }) {
   console.log(layout);
   return (
     <ThemeProvider theme={theme}>
@@ -22,7 +22,7 @@ function Index({ data, menu, site, settings, layout }) {
         />
       </Head>
       <GlobalStyles settings={settings} />
-      <Layout data={data} menu={menu} site={site} />
+      <Layout data={data} menu={menu} site={site} contact={contact} />
     </ThemeProvider>
   );
 }
@@ -34,6 +34,7 @@ export async function getServerSideProps(ctx) {
   var data = await getEasywebData("/routes");
   var menu = await getEasywebData("/load/menu");
   var site = await getEasywebData("/routes");
+  var contact = await getEasywebData("/load/webpage/22211");
 
   // returns an array of alla sidor och puffar
   // var site = await getEasywebData("/types/webpages");
@@ -41,7 +42,7 @@ export async function getServerSideProps(ctx) {
   var settings = await getEasywebData("/load/settings");
   var layout = await getEasywebData("/load/layout");
 
-  return { props: { data, menu, site, settings, layout } };
+  return { props: { data, menu, site, settings, layout, contact } };
 }
 
 export default Index;

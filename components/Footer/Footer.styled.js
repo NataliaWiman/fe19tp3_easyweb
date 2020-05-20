@@ -6,7 +6,7 @@ export const Footer = styled.footer`
 
 export const Container = styled.div`
   width: 100%;
-  height: 700px;
+  height: 600px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -101,7 +101,7 @@ export const UlList = styled.ul`
 
   li {
     padding: 10px;
-    margin-bottom: 110px;
+    margin-bottom: 75px;
   }
   div {
     cursor: pointer;

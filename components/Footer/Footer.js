@@ -1,14 +1,23 @@
-import * as presentation from "./Footer.styled";
+import * as footer from "./Footer.styled";
 import Subscribe from "./Subscribe";
 
-const Footer = ({ data }) => {
-  console.log(data);
+const Footer = ({ data, contact }) => {
+  const contacts = contact.viewTemplate.children[0];
+
+  console.log(contacts.children[0].children[0].value);
+  console.log(contacts.children[0].children[1].value);
+  console.log(contacts.children[1].children[0].value);
+  console.log(contacts.children[1].children[1].value);
+  console.log(contacts.children[2].children[0].value);
+  console.log(contacts.children[2].children[1].value);
+
   return (
-    <presentation.Footer>
+    <footer.Footer>
       <Subscribe />
-      <presentation.Container>
-        <presentation.Headline>DROP US A LINE</presentation.Headline>
-        <presentation.BoxWrapper>
+      <footer.Container>
+        <footer.Headline>DROP US A LINE</footer.Headline>
+
+        <footer.BoxWrapper>
           <div>
             <i className="fas fa-map-marker-alt"></i>
             <h4>ADDRESS</h4>
@@ -25,9 +34,9 @@ const Footer = ({ data }) => {
             <h4>EMAIL</h4>
             <p>SUPPORT@EASYWEB.SE</p>
           </div>
-        </presentation.BoxWrapper>
+        </footer.BoxWrapper>
 
-        <presentation.UlList>
+        <footer.UlList>
           <li>
             <div>
               <i className="fas fa-globe"></i>
@@ -43,14 +52,14 @@ const Footer = ({ data }) => {
               <i className="fas fa-envelope"></i>
             </div>
           </li>
-        </presentation.UlList>
-      </presentation.Container>
-      <presentation.Wrapper>
-        <presentation.BottomContainer>
+        </footer.UlList>
+      </footer.Container>
+      <footer.Wrapper>
+        <footer.BottomContainer>
           <p>Terms & Conditions | Legals</p>
-        </presentation.BottomContainer>
-      </presentation.Wrapper>
-    </presentation.Footer>
+        </footer.BottomContainer>
+      </footer.Wrapper>
+    </footer.Footer>
   );
 };
 

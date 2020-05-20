@@ -1,24 +1,19 @@
-import * as presentation from "./Subscribe.styled";
+import * as subscribe from "./Subscribe.styled";
 
 const Footer = ({ data }) => {
-  console.log(data);
   return (
-    <presentation.Container>
-      <presentation.UlList>
-        <li>
-          <i className="fas fa-paper-plane"></i>
-        </li>
-        <li>
-          <h4>SUBSCRIBE TO STAY IN THE LOOP</h4>
-        </li>
-        <li>
+    <subscribe.Container>
+      <subscribe.Wrapper>
+        <i className="fas fa-paper-plane"></i>
+        <h4>SUBSCRIBE TO STAY IN THE LOOP</h4>
+        <div>
           <form>
             <input></input>
             <button>SEND</button>
           </form>
-        </li>
-      </presentation.UlList>
-    </presentation.Container>
+        </div>
+      </subscribe.Wrapper>
+    </subscribe.Container>
   );
 };
 

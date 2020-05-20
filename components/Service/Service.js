@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import ServiceBox from "./ServiceBox";
-import ServiceBoxBasic from "./ServiceBoxBasic";
+import ServiceBox from "./Box";
+import ServiceBoxBasic from "./BoxBasic";
 
 const services = [
     {

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Skill from "./SkillProgress";
+import Skill from "./Progress";
 
 const SkillsWrapper = styled.section`
   display: flex;

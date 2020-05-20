@@ -4,6 +4,7 @@ import Presentation from "../Presentation/Presentation";
 import Features from "../Features/Features";
 import About from "../About/About";
 import Service from "../Service/Service";
+import Skills from "../Skills/Skills";
 
 const Layout = ({ data, menu, site, features }) => {
   return (
@@ -14,6 +15,7 @@ const Layout = ({ data, menu, site, features }) => {
       <Features data={data} features={features} />
       <About data={data} />
       <Service data={data} />
+      <Skills data={data} />
     </div>
   );
 };

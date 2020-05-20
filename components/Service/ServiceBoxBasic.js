@@ -16,7 +16,7 @@ const ServiceBoxBasic = styled.div`
   h2 {
     font-family: "Montserrat", sans-serif;
     font-size: 32px;
-    color: #605f65;
+    color: black;
     font-weight: 400;
     text-transform: uppercase;
     margin: 0;
@@ -26,7 +26,7 @@ const ServiceBoxBasic = styled.div`
     font-size: 20px;
     font-weight: 400;
     font-style: italic;
-    color: #605f65;
+    color: black;
   }
   @media (max-width: 1024px) {
     padding: 20px;

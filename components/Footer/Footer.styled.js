@@ -60,14 +60,12 @@ export const Wrapper = styled.div`
 `;
 
 export const BoxWrapper = styled.div`
-  position: absolute;
   width: 80%;
-  height: 100%;
+  height: 50%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 40px;
 
   div {
     display: flex;
@@ -93,15 +91,17 @@ export const BoxWrapper = styled.div`
 `;
 
 export const IconWrapper = styled.div`
+  width: 100%;
+  margin: 20px;
   list-style: none;
   display: flex;
   flex-direction: row;
   padding: 0;
   align-items: flex-end;
+  justify-content: center;
 
   div {
     margin: 10px;
-    margin-bottom: 75px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -128,3 +128,11 @@ export const IconWrapper = styled.div`
 //     mobile: "500px",
 //     tablet: "1024px",
 //   };
+
+export const WrapperTwo = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;

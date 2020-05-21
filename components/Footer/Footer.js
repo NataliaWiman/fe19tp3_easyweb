@@ -36,23 +36,19 @@ const Footer = ({ data, contact }) => {
           </div>
         </footer.BoxWrapper>
 
-        <footer.UlList>
-          <li>
-            <div>
-              <i className="fas fa-globe"></i>
-            </div>
-          </li>
-          <li>
-            <div>
-              <i className="fab fa-twitter"></i>
-            </div>
-          </li>
-          <li>
-            <div>
-              <i className="fas fa-envelope"></i>
-            </div>
-          </li>
-        </footer.UlList>
+        <footer.IconWrapper>
+          <div>
+            <i className="fas fa-globe"></i>
+          </div>
+
+          <div>
+            <i className="fab fa-twitter"></i>
+          </div>
+
+          <div>
+            <i className="fas fa-envelope"></i>
+          </div>
+        </footer.IconWrapper>
       </footer.Container>
       <footer.Wrapper>
         <footer.BottomContainer>

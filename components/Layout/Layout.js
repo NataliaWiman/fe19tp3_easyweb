@@ -3,7 +3,7 @@ import Hero from "../Hero/Hero";
 import Presentation from "../Presentation/Presentation";
 import Features from "../Features/Features";
 import Footer from "../Footer/Footer";
-import SectionFour from "../SectionFour/SectionFour";
+import Coworkers from "../Coworkers/Coworkers";
 
 const Layout = ({ data, menu, site, contact }) => {
   return (
@@ -12,7 +12,7 @@ const Layout = ({ data, menu, site, contact }) => {
       <Hero data={data} />
       <Presentation data={data} />
       <Features data={data} />
-      <SectionFour data={data} />
+      <Coworkers data={data} />
       <Footer data={data} contact={contact} />
     </div>
   );

@@ -8,13 +8,13 @@ export const Container = styled.div`
   width: 100%;
   height: 600px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   text-align: center;
   background-color: ${({ theme }) => theme.secondaryLight};
 `;
 
-export const Headline = styled.div`
+export const Headline = styled.h4`
+  font-weight: 200;
   position: absolute;
   margin-top: 80px;
   height: 50px;
@@ -92,18 +92,16 @@ export const BoxWrapper = styled.div`
   }
 `;
 
-export const UlList = styled.ul`
+export const IconWrapper = styled.div`
   list-style: none;
   display: flex;
   flex-direction: row;
   padding: 0;
   align-items: flex-end;
 
-  li {
-    padding: 10px;
-    margin-bottom: 75px;
-  }
   div {
+    margin: 10px;
+    margin-bottom: 75px;
     cursor: pointer;
     display: flex;
     align-items: center;

@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import * as Styled from "../../styles/styled";
 
 export const StyledHero = styled.div`
-  height: 750px;
+  height: 100vh;
   position: relative;
 `;
 
@@ -12,9 +13,9 @@ export const HeroBgWrapper = styled.div`
 `;
 
 export const HeroBg = styled.div`
-  height: 750px;
+  height: 100%;
   position: relative;
-  background-image: url("https://demo-coffee.easyweb.site/upl/images/659073/rf4ohrfelnr21.jpg");
+  background-image: url("https://demo-space-dogs.easyweb.site/upl/images/672643.jpg");
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,50 +28,40 @@ export const HeroBg = styled.div`
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.1);
     z-index: 1;
   }
 `;
 
 export const HeroContent = styled.div`
   position: absolute;
-  left: 50%;
-  bottom: 50px;
-  transform: translateX(-50%);
-  text-align: center;
-  width: 60%;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 0 100px;
+  text-align: right;
+  width: 50%;
   z-index: 2;
 
-  @media screen and (min-width: ${({ theme }) => theme.tablet}) {
-    animation-name: test;
-    animation-delay: 0.4s;
-    animation-duration: 0.5s;
-
-    @keyframes test {
-      0% {
-        transform: translateX(-50%) translateY(100%);
-      }
-      to {
-        transform: translateX(-50%) translateY(0);
-      }
-    }
-  }
-
   @media screen and (max-width: ${({ theme }) => theme.tablet}) {
-    width: 60%;
-    bottom: 50%;
-    transform: translateX(-50%) translateY(50%);
+    width: 100%;
+    text-align: center;
+    padding: 0 30px;
   }
 `;
 
 export const HeroTitle = styled.h1`
-  font-size: ${({ theme }) => theme.fontSize};
+  margin: 0;
+  padding: 10px 0;
+  font-size: 2rem;
   font-weight: 300;
+  letter-spacing: 10px;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.secondaryAccent};
+  color: ${({ theme }) => theme.primaryDark};
 `;
 
-export const HeroText = styled.p`
-  font-size: 2rem;
-  color: ${({ theme }) => theme.primaryLight};
+export const HeroText = styled(Styled.PageText)`
+  margin-bottom: 50px;
 `;
+
+export const HeroBtn = styled(Styled.ButtonA)``;

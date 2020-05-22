@@ -1,11 +1,12 @@
 export const theme = {
   primaryDark: "#303030",
+  secondaryDark: "#989898",
   primaryLight: "#fff",
   secondaryLight: "#f2f2f2",
-  primaryAccent: "#b88a2b",
-  secondaryAccent: "#ecd5ad",
+  primaryAccent: "#f3c840",
+  secondaryAccent: "#efb600",
 
-  fontSize: "18px",
+  fontSize: "16px",
   lineHeight: "1.5",
 
   mobile: "500px",

@@ -16,10 +16,10 @@ export const StyledBurger = styled.div`
     display: flex;
   }
 
-  :hover span {
-    background-color: ${({ theme }) => theme.secondaryAccent};
+/*   :hover span {
+    background-color: ${({ theme }) => theme.primaryAccent};
     transition: background-color 300ms;
-  }
+  } */
 
   span {
     display: block;
@@ -27,7 +27,7 @@ export const StyledBurger = styled.div`
     height: 3px;
     margin: 2px 0;
     background: ${({ open, theme }) =>
-      open ? theme.secondaryLight : theme.primaryLight};
+      open ? theme.primaryAccent : theme.primaryDark};
     border-radius: 3px;
     transition: background 800ms;
     animation-duration: 800ms;

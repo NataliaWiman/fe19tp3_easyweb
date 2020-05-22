@@ -11,11 +11,11 @@ export const StyledNavbar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 100px;
 
   @media screen and (max-width: ${({ theme }) => theme.tablet}) {
+    padding: 0 30px;
     align-items: center;
   }
 `;

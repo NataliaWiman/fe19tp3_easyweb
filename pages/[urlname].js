@@ -5,10 +5,8 @@ import { theme } from "../styles/theme";
 import Navbar from "../components/Navbar/Navbar";
 import Head from "next/head";
 
-const logData = (data) => {};
-
 const Page = ({ data, menu, site, settings }) => {
-  console.dir(data, { depth: null });
+  console.log(data);
   return (
     <ThemeProvider theme={theme}>
       <Head>
@@ -37,6 +35,7 @@ export async function getServerSideProps(ctx) {
   var menu = await getEasywebData("/load/menu");
   var site = await getEasywebData("/load/site");
   var settings = await getEasywebData("/load/settings");
+
   return { props: { data, menu, site, settings } };
 }
 

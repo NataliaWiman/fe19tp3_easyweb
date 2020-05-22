@@ -13,7 +13,7 @@ const Container = styled.div`
 `;
 
 const Bar = styled.div`
-  background-color: goldenrod;
+  background-color:  ${({ theme }) => theme.primaryAccent};
   display: flex;
   justify-content: space-between;
   width: ${props => (props.percent ? `${props.percent}%` : "100%")};

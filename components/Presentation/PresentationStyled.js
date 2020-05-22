@@ -15,6 +15,4 @@ export const Heading = styled(Styled.PageTitle)`
   }
 `;
 
-export const Text = styled(Styled.PageText)`
-  text-align: center;
-`;
+export const Text = styled(Styled.PageText)``;

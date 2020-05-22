@@ -1,6 +1,6 @@
-import * as feature from "./FeaturesStyled";
+import * as features from "./FeaturesStyled";
 
-const Features = ({ data, features }) => {
+const Features = ({ data }) => {
   const array = [
     {
       id: 1,
@@ -26,21 +26,23 @@ const Features = ({ data, features }) => {
   ];
 
   const MainMenu = array.map((item) => (
-    <feature.Item key={item.id}>
-      <feature.IconWrapper>
-        <feature.Icon className={item.iconURL}></feature.Icon>
-      </feature.IconWrapper>
+    <features.Item key={item.id}>
+      <features.IconWrapper>
+        <features.Icon className={item.iconURL}></features.Icon>
+      </features.IconWrapper>
 
-      <feature.ItemTitle>{item.title}</feature.ItemTitle>
-      <feature.ItemText>{item.text}</feature.ItemText>
-    </feature.Item>
+      <features.ItemTitle>{item.title}</features.ItemTitle>
+      <features.ItemText>{item.text}</features.ItemText>
+    </features.Item>
   ));
 
   return (
-    <feature.Wrapper>
-      <feature.Heading>Love what you do, and you'll do it well</feature.Heading>
-      <feature.List>{MainMenu}</feature.List>
-    </feature.Wrapper>
+    <features.Wrapper>
+      <features.Heading>
+        Love what you do, and you'll do it well
+      </features.Heading>
+      <features.List>{MainMenu}</features.List>
+    </features.Wrapper>
   );
 };
 

@@ -23,7 +23,7 @@ const Box = styled.div`
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
     text-transform: uppercase;
-    color: goldenrod;
+    color: ${({ theme }) => theme.primaryAccent};
     transition: color 0.3s;
     &:link,
     &:visited,

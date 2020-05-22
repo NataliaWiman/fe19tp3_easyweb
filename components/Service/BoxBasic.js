@@ -9,7 +9,7 @@ const BoxBasic = styled.div`
     font-family: "Montserrat", sans-serif;
     font-size: 48px;
     font-weight: 400;
-    color: goldenrod;
+    color:  ${({ theme }) => theme.primaryAccent};
     text-transform: uppercase;
     margin: 0;
   }

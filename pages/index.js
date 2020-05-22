@@ -5,11 +5,8 @@ import { theme } from "../styles/theme";
 import Layout from "../components/Layout/Layout";
 import Head from "next/head";
 
-function Index({ data, menu, site, settings, test }) {
-  console.dir(test, { depth: null });
-  //console.log(test);
-  // https://stackoverflow.com/questions/10729276/how-can-i-get-the-full-object-in-node-jss-console-log-rather-than-object
-
+function Index({ data, menu, site, settings, layout, contact }) {
+  console.log(layout);
   return (
     <ThemeProvider theme={theme}>
       <Head>
@@ -25,7 +22,7 @@ function Index({ data, menu, site, settings, test }) {
         />
       </Head>
       <GlobalStyles settings={settings} />
-      <Layout data={data} menu={menu} site={site} />
+      <Layout data={data} menu={menu} site={site} contact={contact} />
     </ThemeProvider>
   );
 }
@@ -35,23 +32,17 @@ export async function getServerSideProps(ctx) {
   // Simple example to illustrate token call
   //console.log(ctx.params.urlname);
   var data = await getEasywebData("/routes");
-  var test = await getEasywebData("/load/webpage/22228");
   var menu = await getEasywebData("/load/menu");
   var site = await getEasywebData("/routes");
+  var contact = await getEasywebData("/load/webpage/22211");
+
   // returns an array of alla sidor och puffar
   // var site = await getEasywebData("/types/webpages");
-  // var site = await getEasywebData("/types/webpages/22228/webpages");
+  // var site = await getEasywebData("/types/webpages/0000/webpages");
   var settings = await getEasywebData("/load/settings");
+  var layout = await getEasywebData("/load/layout");
 
-  return {
-    props: {
-      data,
-      menu,
-      site,
-      settings,
-      test,
-    },
-  };
+  return { props: { data, menu, site, settings, layout, contact } };
 }
 
 export default Index;

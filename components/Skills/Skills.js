@@ -13,6 +13,9 @@ const Content = styled.div`
   text-align: center;
   max-width: 25%;
   margin-bottom: 100px;
+  @media (max-width: 768px) {
+    max-width: 80%;
+  }
   h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;

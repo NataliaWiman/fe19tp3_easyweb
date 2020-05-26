@@ -20,19 +20,19 @@ const Footer = ({ data, contact }) => {
           <footer.BoxWrapper>
             <div>
               <i className="fas fa-map-marker-alt"></i>
-              <h4>ADDRESS</h4>
-              <p>ADRESSVÄGEN 1A</p>
+              <h4>{contacts.children[1].children[0].value}</h4>
+              <p>{contacts.children[1].children[1].value}</p>
               <p>111 23 STOCKHOLM</p>
             </div>
             <div>
               <i className="fas fa-mobile-alt"></i>
-              <h4>PHONE</h4>
-              <p>08 123 456 789</p>
+              <h4>{contacts.children[0].children[0].value}</h4>
+              <p>{contacts.children[0].children[1].value}</p>
             </div>
             <div>
               <i className="fas fa-paper-plane"></i>
-              <h4>EMAIL</h4>
-              <p>SUPPORT@EASYWEB.SE</p>
+              <h4>{contacts.children[2].children[0].value} </h4>
+              <p>{contacts.children[2].children[1].value}</p>
             </div>
           </footer.BoxWrapper>
 

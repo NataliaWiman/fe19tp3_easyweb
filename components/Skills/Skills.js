@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Skill from "./Progress";
+import * as Styled from "../../styles/styled";
 
 const SkillsWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 900px;
 `;
 
 const Content = styled.div`
@@ -28,34 +28,39 @@ const Content = styled.div`
   }
 `;
 
+const Heading = styled(Styled.PageTitle)`
+  font-size: ${({ theme }) => theme.fontSize};
+  text-align: center;
+`;
+
 const skillList = [
   {
     name: "Photography",
-    value: 95
+    value: 95,
   },
   {
     name: "Graphic Design",
-    value: 90
+    value: 90,
   },
   {
     name: "App Development",
-    value: 85
+    value: 85,
   },
   {
     name: "Programming",
-    value: 85
+    value: 85,
   },
   {
     name: "Web Coding",
-    value: 80
-  }
+    value: 80,
+  },
 ];
 
 const Skills = () => {
   return (
     <SkillsWrapper id="skills">
       <Content>
-        <h2>Expertis Skills</h2>
+        <Heading>Expertis Skills</Heading>
         <p>
           Dui aliquam quisque. Nec feugiat ut neque odio quo, proin interdum,
           quis elit varius et duis, dui augue vehicula nam tinc.

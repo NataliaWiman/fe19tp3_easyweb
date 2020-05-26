@@ -13,9 +13,9 @@ const Layout = ({ data, menu, site, contact }) => {
     <div className="layout__wrapper">
       <Navbar data={data} menu={menu} site={site} />
       <Hero data={data} />
-      <Presentation data={data} />
       <Features data={data} />
-      <About data={data} />
+      <Presentation data={data} />
+      {/* <About data={data} /> */}
       <Service data={data} />
       <Skills data={data} />
       <Coworkers data={data} />

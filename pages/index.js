@@ -6,7 +6,6 @@ import Layout from "../components/Layout/Layout";
 import Head from "next/head";
 
 function Index({ data, menu, site, settings, layout, contact }) {
-  console.log(layout);
   return (
     <ThemeProvider theme={theme}>
       <Head>
@@ -35,6 +34,7 @@ export async function getServerSideProps(ctx) {
   var menu = await getEasywebData("/load/menu");
   var site = await getEasywebData("/routes");
   var contact = await getEasywebData("/load/webpage/22211");
+  var pages = await getEasywebData("/types/webpages");
 
   // returns an array of alla sidor och puffar
   // var site = await getEasywebData("/types/webpages");
@@ -42,7 +42,7 @@ export async function getServerSideProps(ctx) {
   var settings = await getEasywebData("/load/settings");
   var layout = await getEasywebData("/load/layout");
 
-  return { props: { data, menu, site, settings, layout, contact } };
+  return { props: { data, menu, site, settings, layout, contact, pages } };
 }
 
 export default Index;

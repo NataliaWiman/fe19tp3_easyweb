@@ -1,4 +1,5 @@
 import * as subscribe from "./Subscribe.styled";
+import * as styles from "../../styles/styled.js";
 
 const Footer = ({ data }) => {
   return (
@@ -9,7 +10,7 @@ const Footer = ({ data }) => {
         <div>
           <form>
             <input></input>
-            <button>SEND</button>
+            <styles.Button>Send</styles.Button>
           </form>
         </div>
       </subscribe.Wrapper>

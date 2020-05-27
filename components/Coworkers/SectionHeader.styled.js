@@ -21,4 +21,8 @@ export const TextBox = styled.div`
     margin: 14px;
     padding: 0;
   }
+
+   @media screen and (max-width: ${({ theme }) => theme.mobile}) {
+      width: 80%;
+    }
 `;

@@ -12,6 +12,7 @@ export const Heading = styled(Styled.PageTitle)`
 export const List = styled(Styled.ListReset)`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 `;
 
 export const Item = styled.li`
@@ -21,6 +22,11 @@ export const Item = styled.li`
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+ @media screen and (max-width: ${({ theme }) => theme.mobile}) {
+    width: 100%;
+  }
+
 `;
 
 export const IconWrapper = styled.div`

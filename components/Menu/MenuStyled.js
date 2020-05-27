@@ -31,7 +31,7 @@ export const StyledMenu = styled.nav`
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     transition: 400ms linear;
     /* transition: ${({ open }) =>
-      open ? "transform 0.8s" : "transform 0s"}; */
+    open ? "transform 0.8s" : "transform 0s"}; */
     /* background: rgba(0, 0, 0, 1); */
 
     width: ${({ open }) => (open ? "100%" : "0")};
@@ -117,7 +117,7 @@ export const StyledMenu = styled.nav`
     }
 
     @media screen and (max-width: ${({ theme }) => theme.tablet}) {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 700;
       margin: 10px 0;
       padding: 0;

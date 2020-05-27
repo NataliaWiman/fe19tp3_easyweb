@@ -6,20 +6,28 @@ export const Footer = styled.footer`
 
 export const Container = styled.div`
   width: 100%;
-  height: 600px;
-  display: flex;
-  justify-content: center;
+  padding: 100px 30px;
+  // height: 600px;
+  // display: flex;
+  // justify-content: center;
   text-align: center;
   background-color: ${({ theme }) => theme.secondaryLight};
 `;
 
 export const Headline = styled.h4`
-  font-weight: 200;
-  position: absolute;
-  margin-top: 80px;
-  height: 50px;
-  min-width: 550px;
-  border-bottom: 2px dotted ${({ theme }) => theme.secondaryDark};
+    position: relative;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0 0 25px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #303030;
+    border-bottom: 2px dotted #989898;
+    text-align: center;
+    margin-bottom: 60px;
 
   :after {
     content: "\f078";
@@ -67,6 +75,11 @@ export const BoxWrapper = styled.div`
   align-items: center;
   justify-content: space-around;
 
+  @media screen and (max-width: ${({ theme }) => theme.mobile}) {
+      flex-wrap: wrap;
+      width: 100%;
+  }
+
   div {
     display: flex;
     align-items: center;
@@ -76,6 +89,11 @@ export const BoxWrapper = styled.div`
     width: 30%;
     padding: 5px;
     height: 140px;
+
+     @media screen and (max-width: ${({ theme }) => theme.mobile}) {
+      width: 100%;
+      margin: 16px 0;
+    }
   }
 
   h4 {

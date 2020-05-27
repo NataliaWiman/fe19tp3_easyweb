@@ -6,7 +6,7 @@ const Coworkers = ({ data }) => {
     {
       id: 1,
       image:
-        "https://images.unsplash.com/photo-1520074189855-c26f27cc7ac8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1340&q=80",
+        "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80",
       name: "JON SNOW",
       text:
         "Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet.",
@@ -18,8 +18,8 @@ const Coworkers = ({ data }) => {
     {
       id: 2,
       image:
-        "https://images.unsplash.com/photo-1504343439004-591f4b611a9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      name: "CERSEI LANNISTER",
+        "https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      name: "JAMIE LANNISTER",
       text:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem.",
       iconURL1: "fas fa-globe",
@@ -29,8 +29,8 @@ const Coworkers = ({ data }) => {
     {
       id: 3,
       image:
-        "https://images.unsplash.com/photo-1539531544785-b84c104e3310?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      name: "JAMIE LANNISTER",
+        "https://images.unsplash.com/photo-1520719627573-5e2c1a6610f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+      name: "CERSEI LANNISTER",
       text:
         "Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante.",
       iconURL1: "fas fa-globe",

@@ -17,7 +17,8 @@ const Hero = ({ data }) => {
       <HeroContent>
         <HeroTitle>{data["hero-top"].demoEntryH1.value}</HeroTitle>
         <HeroText>{data["hero-top"].demoEntryTag.value}</HeroText>
-        <HeroBtn href="/">Learn more</HeroBtn>
+
+        <HeroBtn href="/About">Learn more</HeroBtn>
       </HeroContent>
     </StyledHero>
   );

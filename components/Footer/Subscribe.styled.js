@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-image: url("https://images.unsplash.com/photo-1530022351670-4caa0efc0b4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+  background-image: url("https://images.unsplash.com/photo-1489110804417-276c3f517515?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80");
   width: 100%;
   height: 420px;
   overflow: hidden;
@@ -15,16 +15,18 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  width: 50%;
+  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   div {
+    width: 400px;
     color: ${({ theme }) => theme.primaryDark};
   }
 
   h4 {
+    width: 400px;
     margin: 0;
     margin-bottom: 25px;
     padding: 10px 20px;
@@ -51,17 +53,26 @@ export const Wrapper = styled.div`
   }
 
   input {
+    width: 275px;
     display: inline;
     height: 40px;
-    color: white;
+    color: black;
     font-size: 17px;
     font-weight: bold;
     background: none;
     margin: 0;
-    padding: 0;
+    margin-right: 5px;
+    padding: 0 10px;
     border: 1px solid ${({ theme }) => theme.primaryAccent};
+    background-color: rgba(250,250,250, 0.2);
   }
+
   button {
+    height: 37px;
+  }
+
+  /* button {
+    width: 95px;
     height: 40px;
     font-size: 13px;
     padding: 10px;
@@ -69,7 +80,12 @@ export const Wrapper = styled.div`
     font-weight: 500;
     background-color: ${({ theme }) => theme.primaryLight};
     border: none;
-  }
+    cursor: pointer;
+
+    :hover {
+      background-color: ${({ theme }) => theme.primaryAccent};
+    }
+  } */
 `;
 
 //https://images.unsplash.com/photo-1540431947874-7626a155252a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80

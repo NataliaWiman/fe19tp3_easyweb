@@ -81,12 +81,14 @@ export const BoxWrapper = styled.div`
   h4 {
     color: ${({ theme }) => theme.primaryAccent};
     margin: 10px;
+    text-transform: uppercase;
   }
 
   p {
     margin: 0;
     font-size: 13px;
     color: ${({ theme }) => theme.secondaryDark};
+    text-transform: uppercase;
   }
 `;
 
@@ -111,23 +113,12 @@ export const IconWrapper = styled.div`
     height: 40px;
     border-radius: 50%;
     background-color: ${({ theme }) => theme.primaryAccent};
+
+    :hover {
+      background-color: ${({ theme }) => theme.secondaryAccent};
+    }
   }
 `;
-
-// export const theme = {
-//     primaryDark: "#303030",
-//     secondaryDark: "#989898",
-//     primaryLight: "#fff",
-//     secondaryLight: "#f2f2f2",
-//     primaryAccent: "#f3c840",
-//     secondaryAccent: "#efb600",
-
-//     fontSize: "16px",
-//     lineHeight: "1.5",
-
-//     mobile: "500px",
-//     tablet: "1024px",
-//   };
 
 export const WrapperTwo = styled.div`
   width: 100%;
@@ -135,4 +126,20 @@ export const WrapperTwo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+export const Address = styled.p`
+  text-transform: uppercase;
+`;
+
+export const AddressHeadline = styled.h4`
+  text-transform: uppercase;
+`;
+
+export const PhoneHeadline = styled.h4`
+  text-transform: uppercase;
+`;
+
+export const Email = styled.p`
+  text-transform: uppercase;
 `;

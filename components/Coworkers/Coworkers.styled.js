@@ -42,6 +42,10 @@ export const IconWrapper = styled.div`
     height: 25px;
     border-radius: 50%;
     background-color: ${({ theme }) => theme.primaryAccent};
+
+    :hover {
+      background-color: ${({ theme }) => theme.secondaryAccent};
+    }
   }
 
   i {

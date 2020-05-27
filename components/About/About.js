@@ -1,45 +1,10 @@
-import styled from "styled-components";
-
-const AboutWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 550px;
-`;
-
-const Content = styled.div`
-  text-align: center;
-  max-width: 50%;
-  margin-top: 100px;
-  h2 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 30px;
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-  h3 {
-    margin-top: 50px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-  p {
-    margin-top: 50px;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.667;
-  }
-  @media (max-width: 768px) {
-    max-width: 80%;
-  }
-
-`;
+import * as about from "./About.styled";
+import Divider from "./Divider";
 
 const About = () => {
   return (
-    <AboutWrapper id="about">
-      <Content>
+    <about.AboutWrapper id="about">
+      <about.Content>
         <h2>About Us</h2>
         <h3>Some simple word about our company</h3>
         <p>
@@ -50,8 +15,9 @@ const About = () => {
           has. Partiendo intellegam ex eos, eos putant alienum ea. Ut malorum
           ponderum vituperata eum.
         </p>
-      </Content>
-    </AboutWrapper>
+      </about.Content>
+      <Divider />
+    </about.AboutWrapper>
   );
 };
 

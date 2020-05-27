@@ -15,7 +15,8 @@ export const HeroBgWrapper = styled.div`
 export const HeroBg = styled.div`
   height: 100%;
   position: relative;
-  background-image: url("https://demo-space-dogs.easyweb.site/upl/images/672643.jpg");
+  /* background-image: url("https://demo-space-dogs.easyweb.site/upl/images/672643.jpg"); */
+  background-image: url("https://images.unsplash.com/uploads/141103282695035fa1380/95cdfeef?ixlib=rb-1.2.1&auto=format&fit=crop&w=2774&q=80");
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,15 +40,12 @@ export const HeroContent = styled.div`
   right: 0;
   transform: translateY(-50%);
   padding: 0 100px;
-  text-align: right;
   width: 50%;
   z-index: 2;
 
-  @media screen and (max-width: ${({ theme }) => theme.tablet}) {
-    width: 100%;
-    text-align: center;
-    padding: 0 30px;
-  }
+  width: 100%;
+  text-align: center;
+  padding: 0 30px;
 `;
 
 export const HeroTitle = styled.h1`

@@ -7,21 +7,21 @@ const Features = ({ data }) => {
       title: "Digital design",
       text:
         "Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet. Sed a lorem quis neque interdum consequat ut sed sem.",
-      iconURL: "fas fa-compact-disc",
+      iconURL: "fas fa-palette",
     },
     {
       id: 2,
       title: "Web development",
       text:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
-      iconURL: "fas fa-headphones",
+      iconURL: "fas fa-code",
     },
     {
       id: 3,
       title: "We love you",
       text:
         "Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
-      iconURL: "fas fa-guitar",
+      iconURL: "fas fa-heart",
     },
   ];
 

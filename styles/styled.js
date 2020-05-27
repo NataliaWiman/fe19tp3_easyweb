@@ -59,7 +59,43 @@ export const PageText = styled.p`
   color: ${({ theme }) => theme.secondaryDark};
 `;
 
-export const Button = styled.button``;
+export const Button = styled.button`
+  position: relative;
+  display: inline-block;
+  padding: 15px 35px 11px;
+  font-size: calc(${({ theme }) => theme.fontSize} * 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  color: ${({ theme }) => theme.primaryLight};
+  background-color: ${({ theme }) => theme.primaryAccent};
+  box-shadow: 0px 4px 0px ${({ theme }) => theme.secondaryAccent};
+  cursor: pointer;
+  transition: 0.1s ease-in;
+  z-index: 1;
+  border: 0;
+
+  :hover {
+    color: ${({ theme }) => theme.primaryLight};
+  }
+
+  :before {
+    content: "";
+    position: absolute;
+    background-color: ${({ theme }) => theme.secondaryAccent};
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    transition: top 0.2s ease-in;
+  }
+
+  :hover:before {
+    top: 0;
+  }
+`;
 
 export const ButtonA = styled.a`
   position: relative;

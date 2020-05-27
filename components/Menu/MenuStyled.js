@@ -1,21 +1,45 @@
 import styled from "styled-components";
 
+export const MenuCover = styled.div`
+  width: ${({ open }) => (open ? "100%" : "0")};
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 1);
+  transform: translateX(100%);
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  transition: 400ms linear;
+  z-index: -1;
+  overflow: auto;
+`;
+
 export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: ${({ theme }) => theme.primaryLight};
+  color: ${({ theme }) => theme.primaryDark};
+  overflow: auto;
 
   @media screen and (max-width: ${({ theme }) => theme.tablet}) {
-    width: 100%;
+/*     width: ${({ open }) => (open ? "100%" : "0")};
     position: fixed;
     right: 0;
     top: 0;
     height: 100vh;
-    background-color: ${({ theme }) => theme.primaryAccent};
+    transform: translateX(100%);
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-    transition: transform 0.8s;
-    background: rgba(0, 0, 0, 0.85);
+    transition: 400ms linear;
+    /* transition: ${({ open }) =>
+      open ? "transform 0.8s" : "transform 0s"}; */
+    /* background: rgba(0, 0, 0, 1); */
+
+    width: ${({ open }) => (open ? "100%" : "0")};
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: transparent;
   }
 
   ul {
@@ -26,6 +50,7 @@ export const StyledMenu = styled.nav`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
+    overflow: auto;
 
     @media screen and (max-width: ${({ theme }) => theme.tablet}) {
       flex-direction: column;
@@ -35,6 +60,7 @@ export const StyledMenu = styled.nav`
 
   li {
     margin-right: 35px;
+    text-align: center;
 
     :last-child {
       margin-right: 0;
@@ -44,38 +70,37 @@ export const StyledMenu = styled.nav`
       margin: 0;
       opacity: ${({ open }) => (open ? "1" : "0")};
       transform: ${({ open }) => (open ? "translateY(0)" : "translateY(3rem)")};
-      transition: all 0.6s ease-in-out;
-      transition-delay: 1200ms;
+      transition: all 600ms ease-in-out;
 
       :nth-child(1) {
-        transition-delay: 200ms;
+        transition-delay: ${({ open }) => (open ? "200ms" : "600ms")};
       }
       :nth-child(2) {
-        transition-delay: 300ms;
+        transition-delay: ${({ open }) => (open ? "300ms" : "600ms")};
       }
       :nth-child(3) {
-        transition-delay: 400ms;
+        transition-delay: ${({ open }) => (open ? "400ms" : "600ms")};
       }
       :nth-child(4) {
-        transition-delay: 500ms;
+        transition-delay: ${({ open }) => (open ? "500ms" : "600ms")};
       }
       :nth-child(5) {
-        transition-delay: 600ms;
+        transition-delay: ${({ open }) => (open ? "600ms" : "600ms")};
       }
       :nth-child(6) {
-        transition-delay: 700ms;
+        transition-delay: ${({ open }) => (open ? "700ms" : "600ms")};
       }
       :nth-child(7) {
-        transition-delay: 800ms;
+        transition-delay: ${({ open }) => (open ? "800ms" : "600ms")};
       }
       :nth-child(8) {
-        transition-delay: 900ms;
+        transition-delay: ${({ open }) => (open ? "900ms" : "600ms")};
       }
       :nth-child(9) {
-        transition-delay: 1000ms;
+        transition-delay: ${({ open }) => (open ? "1000ms" : "600ms")};
       }
       :nth-child(10) {
-        transition-delay: 1100ms;
+        transition-delay: ${({ open }) => (open ? "1100ms" : "600ms")};
       }
     }
   }
@@ -83,17 +108,19 @@ export const StyledMenu = styled.nav`
   a {
     display: block;
     text-decoration: none;
-    color: ${({ theme }) => theme.primaryLight};
-    transition: color 0.3s ease-in-out;
+    color: ${({ theme }) => theme.primaryDark};
+    transition: color 0.2s ease-in-out;
     cursor: pointer;
 
     :hover {
-      color: ${({ theme }) => theme.primaryAccent};
+      color: ${({ theme }) => theme.secondaryDark};
     }
 
     @media screen and (max-width: ${({ theme }) => theme.tablet}) {
-      margin: 0;
-      padding: 25px 100px 25px 60px;
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 10px 0;
+      padding: 0;
       color: ${({ theme }) => theme.primaryLight};
     }
   }

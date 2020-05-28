@@ -20,9 +20,19 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
+  @media screen and (max-width: ${({ theme }) => theme.mobile}) {
+      width: 300px;
+  }
+
+
   div {
     width: 400px;
     color: ${({ theme }) => theme.primaryDark};
+
+      @media screen and (max-width: ${({ theme }) => theme.mobile}) {
+      width: 300px;
+  }
+
   }
 
   h4 {
@@ -44,6 +54,11 @@ export const Wrapper = styled.div`
       width: 60%;
       margin-left: 20%;
     } */
+
+      @media screen and (max-width: ${({ theme }) => theme.mobile}) {
+      width: 300px;
+  }
+
   }
 
   i {
@@ -65,6 +80,11 @@ export const Wrapper = styled.div`
     padding: 0 10px;
     border: 1px solid ${({ theme }) => theme.primaryAccent};
     background-color: rgba(250,250,250, 0.2);
+
+    @media screen and (max-width: ${({ theme }) => theme.mobile}) {
+      width: 175px;
+  }
+
   }
 
   button {

@@ -6,18 +6,19 @@ import Navbar from "../components/Navbar/Navbar";
 import Head from "next/head";
 import Footer from "../components/Footer/Footer";
 import About from "../components/About/About";
+import SubPageHeader from "../components/SubPageHeader/SubPageHeader";
 
 import { useRouter } from "next/router";
 
 // https://stackoverflow.com/questions/43862600/how-to-get-query-string-parameters-from-url-in-next-js
 
-const Page = ({ data, menu, site, settings, contact }) => {
+const Page = ({ data, menu, site, settings, contact, omoss }) => {
   const router = useRouter();
   const { urlname } = router.query;
   console.log("current urlname: " + urlname);
   // console.log(data);
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} omoss={omoss}>
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Open+Sans:wght@600&display=swap"
@@ -32,12 +33,14 @@ const Page = ({ data, menu, site, settings, contact }) => {
       </Head>
       <GlobalStyles settings={settings} />
       <Navbar data={data} menu={menu} site={site} />
-      <div>
-        {/* <p>Page urlname: {data.urlname}</p>
+      {/* <div>
+        <p>Page urlname: {data.urlname}</p>
         <p>Id: {data.id}</p>
-        <p>{data.viewTemplate.label}</p> */}
-      </div>
-      {urlname == "om-easyweb" ? <About /> : null}
+        <p>{data.viewTemplate.label}</p>
+      </div> */}
+      <SubPageHeader data={data} />
+      {urlname == "om-easyweb" ? <About omoss={omoss} /> : null}
+
       <Footer data={data} contact={contact} />
     </ThemeProvider>
   );
@@ -53,8 +56,9 @@ export async function getServerSideProps(ctx) {
   var site = await getEasywebData("/load/site");
   var settings = await getEasywebData("/load/settings");
   var contact = await getEasywebData("/load/webpage/22211");
+  var omoss = await getEasywebData("/load/webpage/22205");
 
-  return { props: { data, menu, site, settings, contact } };
+  return { props: { data, menu, site, settings, contact, omoss } };
 }
 
 export default Page;

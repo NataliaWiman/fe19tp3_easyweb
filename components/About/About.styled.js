@@ -12,6 +12,10 @@ export const Content = styled.div`
   text-align: center;
   max-width: 50%;
   margin-top: 40px;
+
+  @media (max-width: 500px) {
+    max-width: 80%;
+  }
   h2 {
     font-family: "Montserrat", sans-serif;
     font-size: 30px;

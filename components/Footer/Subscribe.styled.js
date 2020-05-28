@@ -82,7 +82,7 @@ export const Wrapper = styled.div`
     background-color: rgba(250,250,250, 0.2);
 
     @media screen and (max-width: ${({ theme }) => theme.mobile}) {
-      width: 175px;
+      width: 170px;
   }
 
   }
